@@ -4344,7 +4344,15 @@ public class UserResource {
 		//which calss this.getClass() - ye class ki method hai
 		//konsi method hai..retriveAllUsers()
 		
+
+		//This is updated when i use spring 3.2.4
+		//WebMvcLinkBuilder linkBuilder = WebMvcLinkBuilder.linkTo(this.getClass(), retrieveAllUser(),0);
+		
 		WebMvcLinkBuilder linkBuilder = linkTo(methodOn(this.getClass()).retriveAllUsers());
+
+//This is updated when i use spring 3.2.4
+		//WebMvcLinkBuilder linkBuilder = WebMvcLinkBuilder.linkTo(this.getClass(), retrieveAllUser(),0);
+		
 		
 		//3
 		//Add the link to entity model
@@ -6003,7 +6011,6 @@ yaha CureencyExchangeService ke multiple instance present hai.
 At any point of time we can add up or remove instances of CurrencyExchService.
 
 ![Alt text](image-519.png)
-
 ### Naming Server(Eureka)
 iske 2 kaam hai  
 1. instances / services register karna
@@ -6093,7 +6100,8 @@ spring.config.import=optional:configserver:http://localhost:8888
 
 # 129 Step-2 Creating a hardcoded limits-service V2
 
-***Target: Create a Rest-Api which returning hardcoded data, enhance it to pick value from configuration and then from centralized configuration***
+***Target: Create a Rest-Api which returning hardcoded data, 
+ enhance it to pick value from configuration and then from centralized configuration***
 
 ***Create a Rest-Api which returning hardcoded data***
 
